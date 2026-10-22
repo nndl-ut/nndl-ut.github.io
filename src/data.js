@@ -28,7 +28,7 @@ export const course = {
 
 export const logistics = {
   days: 'Saturdays and Mondays',
-  // NOTE: please double-check the time (it was given as "3 A.M. to 4:30 A.M."; PM is assumed here).
+  // NOTE: please double-check the time (it was given as "3 P.M. to 4:30 P.M."; PM is assumed here).
   time: '3:00 PM – 4:30 PM',
   timezone: 'Iran Standard Time',
   room: 'Class 7',
