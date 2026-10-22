@@ -48,19 +48,19 @@ export const instructor = {
   name: 'Dr. Ahmad Kalhor',
   role: 'Instructor',
   title: 'Associate Professor',
-  photo: '',
+  photo: 'Ahmad Kalhor.jpg',
   links: { ...emptyLinks },
 };
 
 export const headTAs = [
   {
-    name: 'Shahriar Rahimi Rad',
+    name: 'Farzad Jannati',
     role: 'Head TA',
     photo: '',
     links: { ...emptyLinks },
   },
   {
-    name: 'Faezeh Khan Mohammadi',
+    name: 'Dorsa Khalafi',
     role: 'Head TA',
     photo: '',
     links: { ...emptyLinks },
@@ -167,8 +167,20 @@ export const assignmentNote =
 
 // Workshop TAs — 2 slots. Replace the placeholder names when they are decided.
 export const workshopTAs = [
-  ta('Workshop TA 1', 'Workshops'),
-  ta('Workshop TA 2', 'Workshops'),
+  {
+    name: 'Shahriar Rahimi Rad',
+    tag: 'Workshop TA',
+    topic: '',
+    photo: '', // e.g. 'shahriar-rahimi-rad.jpg' (put the file in /public)
+    links: { linkedin: '', github: '', email: '', website: '' },
+  },
+  {
+    name: 'Faezeh Khanmohamadi',
+    tag: 'Workshop TA',
+    topic: '',
+    photo: '', // e.g. 'faezeh-khanmohamadi.jpg'
+    links: { linkedin: '', github: '', email: '', website: '' },
+  },
 ];
 
 // ---------------------------------------------------------------------------
