@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/jpeg" href="/nndl-logo.jpg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Neural Networks and Deep Learning (NNDL), Fall 2026 — School of Electrical and Computer Engineering, University of Tehran." />
+    <title>NNDL Course | ECE at University of Tehran</title>
+  </head>
+  <body class="text-gray-800 antialiased">
+    <div id="app">
+      <!-- ============================ Header ============================ -->
+      <header x-data="{ mobileNavOpen: false }" class="py-2 px-4 shadow-lg bg-primary-600 flex text-white justify-between items-center">
+        <div class="left flex items-center gap-3">
+          <img src="/nndl-logo.jpg" alt="NNDL logo" class="w-16 sm:w-20 rounded-full shadow-lg bg-white" />
+          <div>
+            <h1 id="hdr-title" class="font-semibold sm:text-xl leading-tight">Neural Networks and Deep Learning</h1>
+            <p class="text-xs font-thin leading-snug">
+              School of Electrical &amp; Computer Engineering, <br />
+              University of Tehran
+            </p>
+            <p id="hdr-term" class="text-xs mt-0.5 text-primary-200"></p>
+          </div>
+        </div>
+
+        <!-- Desktop nav -->
+        <ul class="hidden lg:flex gap-6 font-medium">
+          <li><a class="hover:text-primary-200" href="#staff">Teaching Staff</a></li>
+          <li><a class="hover:text-primary-200" href="#logistics">Logistics</a></li>
+          <li><a class="hover:text-primary-200" href="#content">Content</a></li>
+          <li><a class="hover:text-primary-200" href="#grading">Grading</a></li>
+          <li><a class="hover:text-primary-200" href="#schedule">Assignments</a></li>
+        </ul>
+
+        <!-- Mobile menu button -->
+        <button class="lg:hidden" @click="mobileNavOpen = true" aria-label="Open menu">
+          <img src="/menu-outline.svg" class="w-12" alt="" />
+        </button>
+
+        <!-- Mobile drawer -->
+        <nav
+          x-cloak
+          x-show="mobileNavOpen"
+          x-transition.origin.right
+          @click.outside="mobileNavOpen = false"
+          class="min-h-screen bg-white w-10/12 max-w-[32rem] fixed right-0 top-0 z-[100] shadow-2xl border-l border-primary-700/10"
+        >
+          <h2 class="bg-primary-50 rounded-xl m-4 shadow-sm text-primary-500 text-center py-4 px-2 font-semibold">
+            Neural Networks and Deep Learning <br />
+            Course Web Page <br />
+            Fall 2026
+          </h2>
+          <ul class="divide-y-2 px-8 flex flex-col text-primary-600 font-semibold w-full text-center text-lg" @click="mobileNavOpen = false">
+            <li class="py-4"><a href="#staff">Teaching Staff</a></li>
+            <li class="py-4"><a href="#logistics">Logistics</a></li>
+            <li class="py-4"><a href="#content">Content</a></li>
+            <li class="py-4"><a href="#grading">Grading</a></li>
+            <li class="py-4"><a href="#schedule">Assignments</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <!-- ============================ Intro ============================ -->
+      <section id="intro" class="px-6 py-8 container">
+        <p id="intro-text"></p>
+      </section>
+
+      <!-- ============================ Staff ============================ -->
+      <section id="staff" class="bg-primary-50 px-6 py-10">
+        <div class="container">
+          <h1 class="section-title text-center">Teaching Staff</h1>
+
+          <div class="mt-8 flex flex-col lg:flex-row lg:justify-center gap-12 items-center lg:items-start">
+            <div id="instructor"></div>
+            <div id="head-tas"></div>
+          </div>
+
+          <h2 class="font-bold sm:text-xl text-center mt-14">Teaching Assistants</h2>
+          <p class="text-center text-sm text-gray-600 mt-1">Assignment designers and workshop instructors</p>
+          <div id="ta-groups" class="mt-6 grid gap-6 md:grid-cols-2"></div>
+          <div id="workshop-tas" class="mt-6 max-w-xl mx-auto"></div>
+        </div>
+      </section>
+
+      <!-- ============================ Logistics ============================ -->
+      <section id="logistics" class="px-6 py-10">
+        <div class="container">
+          <h1 class="section-title">Logistics</h1>
+          <div id="logistics-body"></div>
+        </div>
+      </section>
+
+      <!-- ============================ Content ============================ -->
+      <section id="content" class="px-6 py-10 bg-primary-50">
+        <div class="container">
+          <h1 class="section-title">Content</h1>
+          <p id="content-text" class="mt-4"></p>
+          <div id="topics" class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4"></div>
+        </div>
+      </section>
+
+      <!-- ============================ Grading ============================ -->
+      <section id="grading" class="px-6 py-10">
+        <div class="container">
+          <h1 class="section-title mb-4">Grading</h1>
+          <div id="grading-body"></div>
+        </div>
+      </section>
+
+      <!-- ============================ Assignments ============================ -->
+      <section id="schedule" class="px-6 py-10 bg-primary-50">
+        <div class="container">
+          <h1 class="section-title mb-4">Assignment Schedule</h1>
+          <div id="schedule-body"></div>
+        </div>
+      </section>
+
+      <footer class="text-center py-6 text-sm text-gray-600 container">
+        Neural Networks and Deep Learning · Fall 2026 · School of Electrical and Computer Engineering, University of Tehran
+      </footer>
+    </div>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
