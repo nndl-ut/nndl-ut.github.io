@@ -2,7 +2,6 @@ export const course = {
   title: 'Neural Networks and Deep Learning',
   shortTitle: 'NNDL',
   term: 'Fall 2026',
-  termFa: '1405 - 1406',
   university: 'University of Tehran',
   faculty: 'School of Electrical & Computer Engineering',
   intro:
