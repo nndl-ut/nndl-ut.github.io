@@ -285,7 +285,7 @@ export const assignments = [
           github: 'https://github.com/bhzadjnty7',
         },
       }),
-      ta('Arsalan Talaie', 'CA7 (Bonus)', {
+      ta('Arsalan Talaei', 'CA7 (Bonus)', {
         photo: 'Arsalan Talaei.jpg',
         links: {
           linkedin: 'https://www.linkedin.com/in/arsalan-talaei-735622278',
