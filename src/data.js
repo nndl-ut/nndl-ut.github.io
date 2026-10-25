@@ -49,7 +49,12 @@ export const instructor = {
   role: 'Instructor',
   title: 'Associate Professor',
   photo: 'Ahmad Kalhor.jpg',
-  links: { https:/www.linkedin.com/in/ahmadkalhor, ad.kalhor@gmail.com, url=https%3A%2F%2Fmodelfarm%2Flogin&urlhash=e0yM&mt=UTHiNO53JZWOyr2Q0rS-zXQAf4kewmH7RLVFF2Inajidy9n1RQRIJyoEvayd_UPaQH6789klyc-hdvXZ93O-7MkAJscL&isSdui=true&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Bikxhg6fvQRKCVTxDzZYzUg%3D%3D},
+  links: {
+    linkedin: 'https://www.linkedin.com/in/ahmadkalhor',
+    github: '',
+    email: 'ad.kalhor@gmail.com',
+    website: '',
+  },
 };
 
 export const headTAs = [
