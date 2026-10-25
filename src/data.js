@@ -286,7 +286,7 @@ export const assignments = [
         },
       }),
       ta('Arsalan Talaei', 'CA7 (Bonus)', {
-        photo: 'Arsalan Talaei.jpg',
+        photo: 'Arsalan Talaei.png',
         links: {
           linkedin: 'https://www.linkedin.com/in/arsalan-talaei-735622278',
           email: 'arsalan.talaei@ut.ac.ir',
