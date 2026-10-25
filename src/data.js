@@ -63,8 +63,8 @@ export const headTAs = [
     photo: 'Dorsa Khalafi.jpg',
     links: {
       linkedin: 'https://www.linkedin.com/in/dorsa-khalafi',
-      github: '',
-      email: '',
+      github: 'https://github.com/dorsakhalafi',
+      email: 'khalafi.dor@gmail.com',
       website: '',
     },
   },
