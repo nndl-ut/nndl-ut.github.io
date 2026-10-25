@@ -128,7 +128,7 @@ export const assignments = [
     deadline: { fa: '24 Aban 1405', en: 'Nov 15, 2026' },
     tas: [
       ta('Artin Tavasoli', 'CA2', {
-        photo: 'Artin Tavasoli.jpg',
+        photo: 'Artin Tavasoli.HEIC',
         links: {
           linkedin: 'https://www.linkedin.com/in/artin-tavasoli',
           email: 'artin.tavassoli2@gmail.com',
