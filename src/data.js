@@ -2,8 +2,8 @@
 //  NNDL Fall 2026 — ALL COURSE CONTENT LIVES HERE
 //  Edit this file to update the website. No HTML changes are needed.
 //
-//  Photos:  drop an image into /public (e.g. public/rahimi-rad.jpg) and set
-//           photo: 'rahimi-rad.jpg'. Leave photo: '' to show a placeholder.
+//  Photos:  drop an image into /public (e.g. public/Farzad Jannati.jpg) and set
+//           photo: 'Farzad Jannati.jpg'. Leave photo: '' to show a placeholder.
 //  Links:   fill linkedin / github / email / website. Empty ('') icons are
 //           shown greyed-out until you fill them in.
 // ============================================================================
@@ -28,7 +28,6 @@ export const course = {
 
 export const logistics = {
   days: 'Saturdays and Mondays',
-  // NOTE: please double-check the time (it was given as "3 P.M. to 4:30 P.M."; PM is assumed here).
   time: '3:00 PM – 4:30 PM',
   timezone: 'Iran Standard Time',
   room: 'Class 7',
@@ -61,7 +60,7 @@ export const headTAs = [
   {
     name: 'Farzad Jannati',
     role: 'Head TA',
-    photo: '',
+    photo: 'Farzad Jannati.jpg',
     links: {
       linkedin: 'https://www.linkedin.com/in/farzadjannati',
       github: 'https://github.com/farzadjannati',
@@ -72,9 +71,9 @@ export const headTAs = [
   {
     name: 'Dorsa Khalafi',
     role: 'Head TA',
-    photo: '',
+    photo: 'Dorsa Khalafi.jpg',
     links: {
-      linkedin: '',
+      linkedin: 'https://www.linkedin.com/in/dorsa-khalafi',
       github: '',
       email: '',
       website: '',
@@ -83,10 +82,17 @@ export const headTAs = [
 ];
 
 // ---------------------------------------------------------------------------
-//  Teaching assistants (names come from the assignment schedule).
-//  `tag` is shown on the card (which assignment / workshop they run).
+//  Teaching assistants
+//  ta(name, tag, { photo, topic, links: { linkedin, github, email, website } })
+//  The third argument is optional; missing fields are left empty.
 // ---------------------------------------------------------------------------
-const ta = (name, tag, topic) => ({ name, tag, topic, photo: '', links: { ...emptyLinks } });
+const ta = (name, tag, extra = {}) => ({
+  name,
+  tag,
+  topic: extra.topic || '',
+  photo: extra.photo || '',
+  links: { ...emptyLinks, ...(extra.links || {}) },
+});
 
 export const assignments = [
   {
@@ -101,7 +107,23 @@ export const assignments = [
     ],
     release: { fa: '27 Mehr 1405', en: 'Oct 19, 2026' },
     deadline: { fa: '10 Aban 1405', en: 'Nov 1, 2026' },
-    tas: [ta('Fatemee Ghalami', 'CA1'), ta('Paria Pasehvarz', 'CA1')],
+    tas: [
+      ta('Fatemee Ghalami', 'CA1', {
+        photo: 'Fatemee Ghalami.jpg',
+        links: {
+          email: 'Fatemeqalami@gmail.com',
+          github: 'https://github.com/feta-feta',
+        },
+      }),
+      ta('Paria Pasehvarz', 'CA1', {
+        photo: 'Paria Pasehvarz.jpg',
+        links: {
+          linkedin: 'https://www.linkedin.com/in/paria-pasehvarz/',
+          email: 'pasehvarzparia@gmail.com',
+          github: 'https://github.com/PariaPasehvarz',
+        },
+      }),
+    ],
   },
   {
     id: 'CA2',
@@ -114,7 +136,24 @@ export const assignments = [
     ],
     release: { fa: '10 Aban 1405', en: 'Nov 1, 2026' },
     deadline: { fa: '24 Aban 1405', en: 'Nov 15, 2026' },
-    tas: [ta('Artin Tavasoli', 'CA2'), ta('Parmida Ghamari', 'CA2')],
+    tas: [
+      ta('Artin Tavasoli', 'CA2', {
+        photo: 'Artin Tavasoli.jpg',
+        links: {
+          linkedin: 'https://www.linkedin.com/in/artin-tavasoli',
+          email: 'artin.tavassoli2@gmail.com',
+          github: 'https://github.com/Artin-Tavasoli',
+        },
+      }),
+      ta('Parmida Ghamari', 'CA2', {
+        photo: 'Parmida Ghamari.jpg',
+        links: {
+          linkedin: 'https://www.linkedin.com/in/parmida-ghamari',
+          email: 'parmida.ghamari@gmail.com',
+          github: 'https://github.com/ParmidaGh',
+        },
+      }),
+    ],
   },
   {
     id: 'CA3',
@@ -126,7 +165,23 @@ export const assignments = [
     ],
     release: { fa: '24 Aban 1405', en: 'Nov 15, 2026' },
     deadline: { fa: '8 Azar 1405', en: 'Nov 29, 2026' },
-    tas: [ta('Sina Hashemi', 'CA3'), ta('Zahra Jani', 'CA3')],
+    tas: [
+      ta('Sina Hashemi', 'CA3', {
+        photo: 'Sina Hashemi.jpg',
+        links: {
+          linkedin: 'https://www.linkedin.com/in/sina-hashemi-125922215',
+          email: 'sinahashemi@ut.ac.ir',
+          github: 'https://github.com/SinaHicomp',
+        },
+      }),
+      ta('Zahra Jani', 'CA3', {
+        photo: 'Zahra Jani.jpg',
+        links: {
+          linkedin: 'https://www.linkedin.com/in/zahra-jani-313422239',
+          email: 'dczahrajn@gmail.com',
+        },
+      }),
+    ],
   },
   {
     id: 'CA4',
@@ -140,7 +195,24 @@ export const assignments = [
     ],
     release: { fa: '8 Azar 1405', en: 'Nov 29, 2026' },
     deadline: { fa: '22 Azar 1405', en: 'Dec 13, 2026' },
-    tas: [ta('Ali Rajabzadeh', 'CA4'), ta('Maryam Vali', 'CA4')],
+    tas: [
+      ta('Ali Rajabzadeh', 'CA4', {
+        photo: 'Ali Rajabzadeh.jpg',
+        links: {
+          linkedin: 'https://www.linkedin.com/in/ali-rajabzadeh-chenari',
+          email: 'alirajabzadeh9@gmail.com',
+          github: 'https://github.com/AliRajabzadehCh',
+        },
+      }),
+      ta('Maryam Vali', 'CA4', {
+        photo: 'Maryam Vali.jpg',
+        links: {
+          linkedin: 'https://www.linkedin.com/in/maryam-vali-25a34a325',
+          email: 'maryam.vali2004@gmail.com',
+          github: 'https://github.com/MarieVli',
+        },
+      }),
+    ],
   },
   {
     id: 'CA5',
@@ -149,7 +221,23 @@ export const assignments = [
     concepts: ['Attention Mechanisms', 'Vanilla Transformer', 'Vision Based Transformers'],
     release: { fa: '22 Azar 1405', en: 'Dec 13, 2026' },
     deadline: { fa: '6 Dey 1405', en: 'Dec 27, 2026' },
-    tas: [ta('Faezeh Mozzafari', 'CA5'), ta('Mohammad Amanlou', 'CA5')],
+    tas: [
+      ta('Faezeh Mozzafari', 'CA5', {
+        photo: 'Faezeh Mozzafari.jpg',
+        links: {
+          linkedin: 'https://www.linkedin.com/in/faezeh-mozaffari-7816b6230',
+          email: 'faezeh.m7899@gmail.com',
+          github: 'https://github.com/faezehmzf',
+        },
+      }),
+      ta('Mohammad Amanlou', 'CA5', {
+        photo: 'Mohammad Amanlou.jpg',
+        links: {
+          linkedin: 'https://www.linkedin.com/in/mohammad-amanlou-220b0121a',
+          email: 'MohammadAmanlou2@gmail.com',
+        },
+      }),
+    ],
   },
   {
     id: 'CA6',
@@ -158,7 +246,23 @@ export const assignments = [
     concepts: ['Variational Auto-encoders', 'Generative Adversarial Networks', 'Diffusion Models'],
     release: { fa: '6 Dey 1405', en: 'Dec 27, 2026' },
     deadline: { fa: '20 Dey 1405', en: 'Jan 10, 2027' },
-    tas: [ta('Zakiye Rostamirad', 'CA6'), ta('Mohammadreza Firoozalizadeh', 'CA6')],
+    tas: [
+      ta('Zakiye Rostamirad', 'CA6', {
+        photo: 'Zakiye Rostamirad.jpg',
+        links: {
+          linkedin: 'https://www.linkedin.com/in/zakiye-rostamirad',
+          email: 'zakiye.rostamirad.2000@gmail.com',
+          github: 'https://github.com/rostamirad',
+        },
+      }),
+      ta('Mohammadreza Firoozalizadeh', 'CA6', {
+        photo: 'Mohammadreza Firoozalizadeh.jpg',
+        links: {
+          linkedin: 'https://www.linkedin.com/in/mohammadreza-firoozalizadeh-52269327a',
+          email: 'alizadeh.reza7997@gmail.com',
+        },
+      }),
+    ],
   },
   {
     id: 'CA7',
@@ -169,10 +273,36 @@ export const assignments = [
     release: { fa: '6 Dey 1405', en: 'Dec 27, 2026' },
     deadline: { fa: '20 Dey 1405', en: 'Jan 10, 2027' },
     tas: [
-      ta('Seyed Reza Moslemi', 'CA7 (Bonus)'),
-      ta('Amirhossein Bonakdar', 'CA7 (Bonus)'),
-      ta('Behzad Jannati', 'CA7 (Bonus)'),
-      ta('Arsalan Talaie', 'CA7 (Bonus)'),
+      ta('Seyed Reza Moslemi', 'CA7 (Bonus)', {
+        photo: 'Seyed Reza Moslemi.jpg',
+        links: {
+          linkedin: 'https://www.linkedin.com/in/seyyedreza-moslemi',
+          email: 'seyyed.moslemi.r@ut.ac.ir',
+          github: 'https://github.com/seyyedmsl82',
+        },
+      }),
+      ta('Amirhossein Bonakdar', 'CA7 (Bonus)', {
+        photo: 'Amirhossein Bonakdar.jpg',
+        links: {
+          linkedin: 'https://www.linkedin.com/in/amirhossein-bonakdar-a138a7156',
+        },
+      }),
+      ta('Behzad Jannati', 'CA7 (Bonus)', {
+        photo: 'Behzad Jannati.jpg',
+        links: {
+          linkedin: 'https://www.linkedin.com/in/behzadjannati',
+          email: 'bhzadjnty7@gmail.com',
+          github: 'https://github.com/bhzadjnty7',
+        },
+      }),
+      ta('Arsalan Talaie', 'CA7 (Bonus)', {
+        photo: 'Arsalan Talaie.jpg',
+        links: {
+          linkedin: 'https://www.linkedin.com/in/arsalan-talaei-735622278',
+          email: 'arsalan.talaei@ut.ac.ir',
+          github: 'https://github.com/ATalaei',
+        },
+      }),
     ],
   },
 ];
@@ -180,22 +310,24 @@ export const assignments = [
 export const assignmentNote =
   'CA7 is a bonus assignment and does not affect the base grading scheme.';
 
-// Workshop TAs — 2 slots. Replace the placeholder names when they are decided.
+// Workshop TAs
 export const workshopTAs = [
-  {
-    name: 'Shahriar Rahimi Rad',
-    tag: 'Workshop TA',
-    topic: '',
-    photo: '', // e.g. 'shahriar-rahimi-rad.jpg' (put the file in /public)
-    links: { linkedin: '', github: '', email: '', website: '' },
-  },
-  {
-    name: 'Faezeh Khanmohamadi',
-    tag: 'Workshop TA',
-    topic: '',
-    photo: '', // e.g. 'faezeh-khanmohamadi.jpg'
-    links: { linkedin: '', github: '', email: '', website: '' },
-  },
+  ta('Shahriar Rahimi Rad', 'Workshop TA', {
+    photo: 'Shahriar Rahimi Rad.jpg',
+    links: {
+      linkedin: 'https://www.linkedin.com/in/shahriar-r-rad',
+      email: 'rahimirad@ut.ac.ir',
+      github: 'https://github.com/shinraad',
+    },
+  }),
+  ta('Faezeh Khanmohamadi', 'Workshop TA', {
+    photo: 'Faezeh Khanmohamadi.jpg',
+    links: {
+      linkedin: 'https://www.linkedin.com/in/faezeh-khanmohamadi-888599287',
+      email: 'fa.khanmohamadi@ut.ac.ir',
+      github: 'https://github.com/FKH2103',
+    },
+  }),
 ];
 
 // ---------------------------------------------------------------------------
