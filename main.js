@@ -59,7 +59,7 @@ const taChip = (t) =>
 // ---------------------------------------------------------------- render
 function renderHeader() {
   $('#hdr-title').textContent = course.title
-  $('#hdr-term').textContent = `${course.term} · ${course.termFa}`
+  $('#hdr-term').textContent = course.termFa ? `${course.term} · ${course.termFa}` : course.term
   document.title = `${course.shortTitle} | ${course.university} ECE — ${course.term}`
 }
 
