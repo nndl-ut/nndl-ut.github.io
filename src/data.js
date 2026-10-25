@@ -62,13 +62,23 @@ export const headTAs = [
     name: 'Farzad Jannati',
     role: 'Head TA',
     photo: '',
-    links: { https:/www.linkedin.com/in/farzadjannati, https:/github.com/farzadjannati, farzadjannati@ut.ac.ir },
+    links: {
+      linkedin: 'https://www.linkedin.com/in/farzadjannati',
+      github: 'https://github.com/farzadjannati',
+      email: 'farzadjannati@ut.ac.ir',
+      website: '',
+    },
   },
   {
     name: 'Dorsa Khalafi',
     role: 'Head TA',
     photo: '',
-    links: { https:/www.linkedin.com/in/faezeh-khanmohamadi-888599287, https:/github.com/FKH2103?tab=repositories, fa.khanmohamadi@ut.ac.ir },
+    links: {
+      linkedin: '',
+      github: '',
+      email: '',
+      website: '',
+    },
   },
 ];
 
