@@ -1,13 +1,3 @@
-// ============================================================================
-//  NNDL Fall 2026 — ALL COURSE CONTENT LIVES HERE
-//  Edit this file to update the website. No HTML changes are needed.
-//
-//  Photos:  drop an image into /public (e.g. public/Farzad Jannati.jpg) and set
-//           photo: 'Farzad Jannati.jpg'. Leave photo: '' to show a placeholder.
-//  Links:   fill linkedin / github / email / website. Empty ('') icons are
-//           shown greyed-out until you fill them in.
-// ============================================================================
-
 export const course = {
   title: 'Neural Networks and Deep Learning',
   shortTitle: 'NNDL',
