@@ -213,7 +213,7 @@ export const assignments = [
     deadline: { fa: '6 Dey 1405', en: 'Dec 27, 2026' },
     tas: [
       ta('Faezeh Mozzafari', 'CA5', {
-        photo: 'Faezeh Mozzafari.jpg',
+        photo: 'Faezeh Mozaffari.jpg',
         links: {
           linkedin: 'https://www.linkedin.com/in/faezeh-mozaffari-7816b6230',
           email: 'faezeh.m7899@gmail.com',
@@ -286,7 +286,7 @@ export const assignments = [
         },
       }),
       ta('Arsalan Talaie', 'CA7 (Bonus)', {
-        photo: 'Arsalan Talaie.jpg',
+        photo: 'Arsalan Talaei.jpg',
         links: {
           linkedin: 'https://www.linkedin.com/in/arsalan-talaei-735622278',
           email: 'arsalan.talaei@ut.ac.ir',
